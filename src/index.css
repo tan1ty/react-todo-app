@@ -1,0 +1,11 @@
+.App {
+  max-width: 728px;
+  margin: 4rem auto;
+  color: var(--color-font-primary);
+}
+
+.App > h1 {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 3rem;
+}
