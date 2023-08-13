@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import { ITodo, ApiDataType, NewTodo } from './interface';
+import { ApiDataType, NewTodo, TodoToUpdate } from './interface';
 
 const baseUrl: string = 'http://localhost:4000';
 
@@ -17,13 +17,10 @@ export const addTodo = async (formData: NewTodo) => {
   return savedTodo;
 };
 
-export const updateTodo = async (todo: ITodo) => {
-  const todoUpdate: Pick<ITodo, 'status'> = {
-    status: true,
-  };
+export const updateTodo = async (todo: TodoToUpdate) => {
   const updatedTodo: AxiosResponse<ApiDataType> = await axios.put(
     `${baseUrl}/edit-todo/${todo._id}`,
-    todoUpdate
+    { description: todo.description, name: todo.name, status: todo.status }
   );
   return updatedTodo;
 };

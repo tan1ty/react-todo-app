@@ -25,7 +25,7 @@ const App: React.FC = () => {
       .catch((err) => console.log(err));
   };
 
-  // your implementation for handleSaveTodo
+  // your implementation for handleUpdateTodo
   // your implementation for handleDeleteTodo
 
   return (

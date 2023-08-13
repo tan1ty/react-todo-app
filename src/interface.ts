@@ -17,3 +17,10 @@ export interface NewTodo {
   description: ITodo['description'];
   status?: ITodo['status'];
 }
+
+export interface TodoToUpdate {
+  _id: ITodo['_id'];
+  name: ITodo['name'];
+  description: ITodo['description'];
+  status: ITodo['status'];
+}
