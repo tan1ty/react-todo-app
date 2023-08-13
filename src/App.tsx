@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { getTodos, addTodo } from './api';
+import { fetchTodos, addTodo } from './api';
 import { ITodo } from './interface';
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<ITodo[]>([]);
 
   useEffect(() => {
-    fetchTodos();
+    loadTodos();
   }, []);
 
-  const fetchTodos = (): void => {
-    getTodos()
+  const loadTodos = (): void => {
+    fetchTodos()
       .then((res) => {
         setTodos(res?.data?.todos || []);
       })

@@ -3,7 +3,7 @@ import { ApiDataType, NewTodo, TodoToUpdate } from './interface';
 
 const baseUrl: string = 'http://localhost:4000';
 
-export const getTodos = async () => {
+export const fetchTodos = async () => {
   const todos: AxiosResponse<ApiDataType> = await axios.get(baseUrl + '/todos');
   return todos;
 };
