@@ -1,0 +1,31 @@
+#+AUTHOR: Karim Aziiev
+#+EMAIL: karim.aziiev@gmail.com
+#+OPTIONS: ^:nil tags:nil num:nil
+
+* About
+This template provides a minimal setup for beginners to learn react and build todo application integrated with [[https://github.com/KarimAziev/nodejs-todo-app][node-todo-app]].
+
+* react-todo-app                                             :TOC_3_gh:QUOTE:
+#+BEGIN_QUOTE
+- [[#about][About]]
+- [[#usage][Usage]]
+  - [[#start-server][Start server]]
+  - [[#start-client][Start client]]
+  - [[#start-developing][Start developing]]
+#+END_QUOTE
+
+* Usage
+** Start server
+Setup and run [[https://github.com/KarimAziev/nodejs-todo-app][node-todo-app]] locally.
+
+** Start client
+In other terminal run this client application.
+#+begin_src shell
+npm install && npm dev
+#+end_src
+
+** Start developing
+
+- [[https://github.com/KarimAziev/react-todo-app/blob/main/src/api.ts#L39][src/api.ts]] This file already contains basic functions for making api requests to [[https://github.com/KarimAziev/nodejs-todo-app][node-todo-app]].
+- [[https://github.com/KarimAziev/react-todo-app/blob/main/src/App.tsx#L2][src/App.tsx]] Your entry point for starting developing. The app contains skeleton that fetches list of todos. Everything else is up to you. 
+- [[https://github.com/KarimAziev/react-todo-app/blob/main/src/interface.ts#L1][src/interface.ts]]  Basic interfaces with [[https://github.com/KarimAziev/nodejs-todo-app][node-todo-app]] request and response types. 
