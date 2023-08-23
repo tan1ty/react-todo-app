@@ -33,6 +33,17 @@ const App: React.FC = () => {
       .catch((err) => console.log(err));
   };
 
+  const handleDeleteTodo = (todoId: string) => {
+    deleteTodo(todoId)
+      .then(({ data }) => {
+        const tasksWithoutDeleted = data.todos.filter(
+          (todo) => todo._id !== todoId
+        );
+        setTodos(tasksWithoutDeleted);
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <main className="App">
       <h1>To-do list</h1>
@@ -55,6 +66,7 @@ const App: React.FC = () => {
         <li key={todo._id}>
           <span>{todo.name}</span>
           <input type="text" value={todo.description} />
+          <button onClick={() => handleDeleteTodo(todo._id)}>DELETE</button>
         </li>
       ))}
     </main>
